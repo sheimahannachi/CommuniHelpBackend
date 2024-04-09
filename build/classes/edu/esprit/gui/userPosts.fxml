@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.UserPostsController">
+   <children>
+      <VBox fx:id="postContainer" layoutX="401.0" layoutY="34.0" prefHeight="258.0" prefWidth="250.0" />
+      <ImageView fx:id="chatbot" fitHeight="168.0" fitWidth="164.0" layoutX="812.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/chatbot.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-3.0" prefHeight="782.0" prefWidth="302.0" style="-fx-background-color: #57A1AC;">
+         <children>
+            <Button fx:id="gotoouma" layoutX="52.0" layoutY="238.0" mnemonicParsing="false" onAction="#gotoouma" prefHeight="46.0" prefWidth="234.0" styleClass="btn" stylesheets="@offreStyle.css" text="Faire un Don" translateY="53.0">
+               <font>
+                  <Font name="Britannic Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="eventbtn3" layoutX="52.0" layoutY="396.0" mnemonicParsing="false" onAction="#eventaction" prefHeight="54.0" prefWidth="234.0" styleClass="btn" stylesheets="@offreStyle.css" text="Evénements" translateY="41.0">
+               <font>
+                  <Font name="Britannic Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="espaceadminbtn3" layoutX="52.0" layoutY="320.0" mnemonicParsing="false" onAction="#adminaction1" prefHeight="46.0" prefWidth="234.0" styleClass="btn" stylesheets="@offreStyle.css" text="Boutique" translateY="44.0">
+               <font>
+                  <Font name="Britannic Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="retourbtn3" layoutX="48.0" layoutY="310.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="234.0" styleClass="btn" stylesheets="@offreStyle.css" text="Publications Mental-Health" translateX="4.0" translateY="-88.0">
+               <font>
+                  <Font name="Britannic Bold" size="19.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" translateX="55.0">
+               <image>
+                  <Image url="@../../../images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="dec" layoutX="930.0" layoutY="27.0" mnemonicParsing="false" onAction="#dec1" prefHeight="46.0" prefWidth="142.0" style="-fx-background-color: #fa4747;" text="Deconnexion" />
+   </children>
+</AnchorPane>

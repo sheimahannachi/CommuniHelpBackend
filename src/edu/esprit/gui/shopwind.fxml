@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.ShopwindController">
+   <children>
+      <AnchorPane prefHeight="472.0" prefWidth="873.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="258.0" layoutY="72.0" prefHeight="603.0" prefWidth="280.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="67.0" layoutY="87.0" stylesheets="@design.css" text="Nom du produit">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label layoutX="68.0" layoutY="126.0" stylesheets="@design.css" text="Prix">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label layoutX="69.0" layoutY="161.0" stylesheets="@design.css" text="Description">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label layoutX="70.0" layoutY="290.0" prefHeight="25.0" prefWidth="52.0" stylesheets="@design.css" text="Statut">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="prod_nom" layoutX="170.0" layoutY="83.0" prefHeight="25.0" prefWidth="119.0" styleClass="textfield-design" stylesheets="@design.css" />
+                  <TextField fx:id="prod_prix" layoutX="170.0" layoutY="122.0" prefHeight="25.0" prefWidth="119.0" styleClass="textfield-design" stylesheets="@design.css" />
+                  <TextField fx:id="desc_prod" layoutX="69.0" layoutY="193.0" prefHeight="76.0" prefWidth="202.0" styleClass="textfield-design" stylesheets="@design.css" />
+                  <ImageView fx:id="imageView" fitHeight="175.0" fitWidth="196.0" layoutX="63.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
+                  <ComboBox fx:id="statut_prod" layoutX="145.0" layoutY="292.0" prefHeight="25.0" prefWidth="135.0" styleClass="sort__comboBox" stylesheets="@offreStyle.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="538.0" layoutY="125.0" prefHeight="435.0" prefWidth="510.0">
+               <children>
+                  <TableView fx:id="product_view" layoutX="17.0" prefHeight="435.0" prefWidth="519.0" stylesheets="@offreStyle.css">
+                    <columns>
+                      <TableColumn fx:id="prodcol_nom" prefWidth="136.0" text="Nom du produit" />
+                      <TableColumn fx:id="prodcol_prix" prefWidth="101.5999755859375" text="Prix" />
+                        <TableColumn fx:id="prod_coldesc" prefWidth="154.4000244140625" text="Description" />
+                        <TableColumn fx:id="prodcol_statut" prefWidth="133.5999755859375" text="Statut" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="700.0" prefWidth="271.0" style="-fx-background-color: #57A1AC;" stylesheets="@offreStyle.css">
+               <children>
+                  <Button fx:id="swingtoL" layoutX="34.0" layoutY="618.0" mnemonicParsing="false" onAction="#swingtoL" prefHeight="25.0" prefWidth="184.0" styleClass="btn" stylesheets="@offreStyle.css" text="Liste des commandes">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="107.0" fitWidth="113.0" layoutX="82.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="retriev" layoutX="34.0" layoutY="554.0" mnemonicParsing="false" onAction="#retrieveProdadminDataButton" prefHeight="38.0" prefWidth="184.0" styleClass="btn" stylesheets="@offreStyle.css" text="Notifications" />
+                  <Button fx:id="gotodons" layoutX="44.0" layoutY="229.0" mnemonicParsing="false" onAction="#gotodonact" prefHeight="64.0" prefWidth="184.0" styleClass="btn" stylesheets="@design.css" text="Appel aux dons" />
+                  <Button fx:id="gotoevent" layoutX="46.0" layoutY="325.0" mnemonicParsing="false" onAction="#gotoevent" prefHeight="64.0" prefWidth="184.0" styleClass="btn" stylesheets="@design.css" text="Événements " />
+               </children>
+            </AnchorPane>
+            <Button layoutX="586.0" layoutY="585.0" mnemonicParsing="false" onAction="#saveproducts" prefHeight="38.0" prefWidth="79.0" styleClass="textfield-design" stylesheets="@design.css" text="Ajouter" textFill="#35257b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="691.0" layoutY="585.0" mnemonicParsing="false" onAction="#updateproducts" prefHeight="38.0" prefWidth="72.0" styleClass="textfield-design" stylesheets="@design.css" text="Modifier" textFill="#35257b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="vider" layoutX="902.0" layoutY="585.0" mnemonicParsing="false" onAction="#viderbtn" prefHeight="38.0" prefWidth="60.0" styleClass="textfield-design" stylesheets="@design.css" text="vider" textFill="#35257b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="798.0" layoutY="585.0" mnemonicParsing="false" onAction="#deleteproduct" prefHeight="38.0" prefWidth="79.0" styleClass="textfield-design" stylesheets="@design.css" text="Supprimer" textFill="#35257b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnImporter" layoutX="312.0" layoutY="612.0" mnemonicParsing="false" onAction="#handleImportButtonAction" prefHeight="32.0" prefWidth="127.0" styleClass="textfield-design" stylesheets="@design.css" text="Importer" textFill="#35257b">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="dec" layoutX="929.0" layoutY="14.0" mnemonicParsing="false" onAction="#dec1" prefHeight="46.0" prefWidth="145.0" style="-fx-background-color: #fa4747;" text="Deconnexion" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

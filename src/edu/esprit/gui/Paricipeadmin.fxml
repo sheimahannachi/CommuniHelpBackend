@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.ParicipeadminController">
+   <children>
+      <AnchorPane layoutX="-9.0" prefHeight="714.0" prefWidth="298.0" style="-fx-background-color: #57A1AC;">
+         <children>
+            <ImageView fitHeight="132.0" fitWidth="136.0" layoutX="74.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="retour" layoutX="75.0" layoutY="640.0" mnemonicParsing="false" onAction="#Retourtoeventadmin" prefHeight="42.0" prefWidth="148.0" styleClass="btn" stylesheets="@offreStyle.css" text="Retour" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableadmin" layoutX="393.0" layoutY="58.0" prefHeight="434.0" prefWidth="482.0" stylesheets="@offreStyle.css">
+        <columns>
+          <TableColumn fx:id="adnom" prefWidth="168.79998779296875" text="Nom" />
+          <TableColumn fx:id="adnum" prefWidth="126.4000244140625" text="Contact" />
+            <TableColumn fx:id="admail" prefWidth="187.199951171875" text="Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="btndelete" layoutX="464.0" layoutY="564.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="42.0" prefWidth="114.0" styleClass="textfield-design" stylesheets="@design.css" text="Supprimer">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnsend" layoutX="703.0" layoutY="564.0" mnemonicParsing="false" onAction="#send" prefHeight="42.0" prefWidth="114.0" styleClass="textfield-design" stylesheets="@design.css" text="Notifier">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="dec" layoutX="921.0" layoutY="24.0" mnemonicParsing="false" onAction="#dec1" prefHeight="46.0" prefWidth="142.0" style="-fx-background-color: #fa4747;" text="Deconnexion" />
+   </children>
+</AnchorPane>

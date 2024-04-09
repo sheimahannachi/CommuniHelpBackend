@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.EventController">
+   <children>
+      <Label layoutX="286.0" layoutY="169.0" stylesheets="@offreStyle.css" text="Nom" textFill="#321a1a">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="284.0" layoutY="244.0" stylesheets="@offreStyle.css" text="Lieu">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="284.0" layoutY="370.0" stylesheets="@offreStyle.css" text="Date">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <DatePicker fx:id="tfdate" layoutX="348.0" layoutY="359.0" prefHeight="45.0" prefWidth="212.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <TextField fx:id="tfnom" layoutX="353.0" layoutY="164.0" prefHeight="31.0" prefWidth="194.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <ComboBox fx:id="tfcombo" layoutX="353.0" layoutY="244.0" prefHeight="31.0" prefWidth="185.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <Button fx:id="ajoutbtn" layoutX="584.0" layoutY="594.0" mnemonicParsing="false" onAction="#ajouterEvent" prefHeight="60.0" prefWidth="134.0" styleClass="textfield-design" stylesheets="@design.css" text="ajouter" textFill="#1e1010">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="modifbtn" layoutX="753.0" layoutY="595.0" mnemonicParsing="false" onAction="#modifierEvent" prefHeight="62.0" prefWidth="147.0" styleClass="textfield-design" stylesheets="@design.css" text="modifier" textFill="#221515">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="supprimbtn" layoutX="924.0" layoutY="594.0" mnemonicParsing="false" onAction="#supprimerEvent" prefHeight="61.0" prefWidth="147.0" styleClass="textfield-design" stylesheets="@design.css" text="supprimer" textFill="#4d2121">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <TableView fx:id="view_event" layoutX="579.0" layoutY="152.0" prefHeight="360.0" prefWidth="495.0" stylesheets="@offreStyle.css">
+        <columns>
+          <TableColumn fx:id="nom_column" prefWidth="135.199951171875" text="Nom" />
+          <TableColumn fx:id="lieu_column" prefWidth="179.199951171875" text="lieu" />
+            <TableColumn fx:id="date_column" prefWidth="201.59991455078125" text="date" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_img" layoutX="303.0" layoutY="614.0" mnemonicParsing="false" onAction="#btn_img" prefHeight="62.0" prefWidth="244.0" styleClass="textfield-design" stylesheets="@design.css" text="importer">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <AnchorPane fx:id="paneh" layoutX="311.0" layoutY="421.0" prefHeight="180.0" prefWidth="210.0">
+         <children>
+            <ImageView fx:id="imgv" fitHeight="180.0" fitWidth="200.0" layoutX="1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="-27.0" layoutY="-4.0" prefHeight="710.0" prefWidth="294.0" style="-fx-background-color: #57A1AC;">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="110.0" layoutX="93.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btndon" layoutX="65.0" layoutY="389.0" mnemonicParsing="false" onAction="#btndonaction" prefHeight="60.0" prefWidth="194.0" styleClass="btn" stylesheets="@offreStyle.css" text="Appel aux dons" />
+            <Button fx:id="boutiqueid" layoutX="65.0" layoutY="491.0" mnemonicParsing="false" onAction="#boutiqueaction" prefHeight="60.0" prefWidth="194.0" styleClass="btn" stylesheets="@offreStyle.css" text="Boutique" />
+            <Button layoutX="65.0" layoutY="295.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="194.0" styleClass="btn" stylesheets="@offreStyle.css" text="Evénements" />
+         </children>
+      </Pane>
+      <Button fx:id="dec" layoutX="940.0" layoutY="37.0" mnemonicParsing="false" onAction="#dec1" prefHeight="46.0" prefWidth="142.0" style="-fx-background-color: #fa4747;" text="Deconnexion" />
+   </children>
+</AnchorPane>

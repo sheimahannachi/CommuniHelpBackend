@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="fxFront" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.AdminController2">
+   <children>
+      <AnchorPane layoutX="-13.0" layoutY="-1.0" prefHeight="766.0" prefWidth="301.0" style="-fx-background-color: #57A1AC;">
+         <children>
+            <Button fx:id="appeldonbtn2" layoutX="52.0" layoutY="147.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="234.0" styleClass="btn" stylesheets="@offreStyle.css" text="Appel aux dons" translateY="53.0">
+               <font>
+                  <Font name="Britannic Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="eventbtn" layoutX="52.0" layoutY="314.0" mnemonicParsing="false" onAction="#eventadminaction" prefHeight="54.0" prefWidth="234.0" styleClass="btn" stylesheets="@offreStyle.css" text="Evénements" translateY="41.0">
+               <font>
+                  <Font name="Britannic Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="espaceadminbtn2" layoutX="52.0" layoutY="231.0" mnemonicParsing="false" onAction="#adminshop" prefHeight="46.0" prefWidth="234.0" styleClass="btn" stylesheets="@offreStyle.css" text="Boutique" translateY="44.0">
+               <font>
+                  <Font name="Britannic Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="historiquebtn" layoutX="52.0" layoutY="392.0" mnemonicParsing="false" onAction="#consulterhistoriqueaction" prefHeight="54.0" prefWidth="234.0" styleClass="btn" stylesheets="@offreStyle.css" text="Consulter historique " translateY="46.0">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="retourbtn" layoutX="18.0" layoutY="734.0" mnemonicParsing="false" onAction="#retourmethod" prefHeight="46.0" prefWidth="188.0" styleClass="btn" stylesheets="@offreStyle.css" text="Retour" translateX="4.0" translateY="-88.0">
+               <font>
+                  <Font name="Britannic Bold" size="19.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="47.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" translateX="55.0">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="medid" layoutX="52.0" layoutY="510.0" mnemonicParsing="false" onAction="#medidaction" prefHeight="54.0" prefWidth="234.0" styleClass="btn" stylesheets="@offreStyle.css" text="Posts Médecins" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableview2" layoutX="624.0" layoutY="132.0" prefHeight="382.0" prefWidth="468.0" style="-fx-border-color: pink;" stylesheets="@offreStyle.css">
+         <columns>
+            <TableColumn fx:id="villecolumnid2" prefWidth="104.0" text="Ville" />
+            <TableColumn fx:id="descriptioncolumnid2" prefWidth="129.60003662109375" text="Description" />
+            <TableColumn fx:id="contactcolumnid2" prefWidth="93.5999755859375" text="Contact" />
+            <TableColumn fx:id="datedecreationcolumnid2" prefWidth="135.2000732421875" text="Date de création" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnClear2" layoutX="910.0" layoutY="621.0" mnemonicParsing="false" onAction="#clear2" prefHeight="38.0" prefWidth="151.0" styleClass="textfield-design" stylesheets="@design.css" text="Clear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSupprimer2" layoutX="743.0" layoutY="621.0" mnemonicParsing="false" onAction="#supprimer2" prefHeight="38.0" prefWidth="158.0" styleClass="textfield-design" stylesheets="@design.css" text="Supprimer">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnModifier2" layoutX="583.0" layoutY="618.0" mnemonicParsing="false" onAction="#modifier2" prefHeight="43.0" prefWidth="150.0" styleClass="textfield-design" stylesheets="@design.css" text="Modifier">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="307.0" layoutY="143.0" prefHeight="26.0" prefWidth="38.0" stylesheets="@offreStyle.css" text="Ville">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="207.0" prefHeight="27.0" prefWidth="124.0" stylesheets="@offreStyle.css" text="Description">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="323.0" prefHeight="27.0" prefWidth="151.0" stylesheets="@offreStyle.css" text="Date de création">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="271.0" prefHeight="27.0" prefWidth="107.0" stylesheets="@offreStyle.css" text="Contact">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfVille2" layoutX="434.0" layoutY="143.0" prefHeight="26.0" prefWidth="175.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <TextField fx:id="tfDescription2" layoutX="434.0" layoutY="190.0" prefHeight="64.0" prefWidth="175.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <TextField fx:id="tfContact2" layoutX="435.0" layoutY="272.0" prefHeight="26.0" prefWidth="175.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <DatePicker fx:id="tfDate2" layoutX="434.0" layoutY="326.0" prefHeight="27.0" prefWidth="150.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <ImageView fx:id="imageView2" fitHeight="168.0" fitWidth="244.0" layoutX="329.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnImporter2" layoutX="349.0" layoutY="620.0" mnemonicParsing="false" onAction="#importer2" prefHeight="38.0" prefWidth="164.0" styleClass="textfield-design" stylesheets="@design.css" text="Importer">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="dec" layoutX="940.0" layoutY="37.0" mnemonicParsing="false" onAction="#dec1" prefHeight="46.0" prefWidth="142.0" style="-fx-background-color: #fa4747;" text="Deconnexion" />
+   </children>
+</AnchorPane>

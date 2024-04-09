@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.CommandeController">
+   <children>
+      <AnchorPane prefHeight="858.0" prefWidth="1294.0">
+         <children>
+            <AnchorPane layoutX="243.0" layoutY="-3.0" prefHeight="930.0" prefWidth="1109.0">
+               <children>
+                  <Label layoutX="333.0" layoutY="75.0" prefHeight="17.0" prefWidth="308.0" text="Liste des Commandes" textFill="#222222">
+                     <font>
+                        <Font name="Franklin Gothic Medium Cond" size="31.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="Ctable" layoutX="263.0" layoutY="186.0" prefHeight="448.0" prefWidth="670.0" stylesheets="@offreStyle.css">
+                    <columns>
+                      <TableColumn fx:id="prodCo" prefWidth="99.0" text="Produit" />
+                        <TableColumn fx:id="contactCo" minWidth="9.0" prefWidth="108.0" text="Contact" />
+                      <TableColumn fx:id="nomCo" prefWidth="106.0" text="Nom " />
+                        <TableColumn fx:id="emailCo" prefWidth="162.0" text="Email" />
+                        <TableColumn fx:id="adresseCo" prefWidth="209.0" text="Adresse" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="annulerC" layoutX="473.0" layoutY="690.0" mnemonicParsing="false" onAction="#annulerC" prefHeight="49.0" prefWidth="243.0" styleClass="textfield-design" stylesheets="@design.css" text="Annuler la commande" textFill="#191343">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="73.0" layoutY="60.0" prefHeight="762.0" prefWidth="387.0" style="-fx-background-color: #57A1AC;">
+               <children>
+                  <ImageView fitHeight="91.0" fitWidth="136.0" layoutX="166.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="retour" layoutX="100.0" layoutY="678.0" mnemonicParsing="false" onAction="#swingtoS" prefHeight="35.0" prefWidth="94.0" styleClass="btn" stylesheets="@offreStyle.css" text="Retour" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

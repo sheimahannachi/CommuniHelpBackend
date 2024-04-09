@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.ParicipeController">
+   <children>
+      <TableView fx:id="table" layoutX="594.0" layoutY="72.0" onMouseClicked="#showimg" prefHeight="506.0" prefWidth="474.0" stylesheets="@offreStyle.css">
+        <columns>
+          <TableColumn fx:id="tfidp" prefWidth="187.99993896484375" text="Nom du participant" />
+          <TableColumn fx:id="tflp" prefWidth="121.60009765625" text="Lieu" />
+            <TableColumn fx:id="tfpd" prefWidth="161.86663818359375" text="Date de création" />
+        </columns>
+      </TableView>
+      <Button fx:id="participebt" layoutX="341.0" layoutY="612.0" mnemonicParsing="false" onMouseClicked="#participebtn" prefHeight="40.0" prefWidth="173.0" styleClass="textfield-design" stylesheets="@design.css" text="Je participe ! ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Label fx:id="labelParticipants" layoutX="725.0" layoutY="632.0" prefHeight="42.0" prefWidth="230.0" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <Button fx:id="btn_voir" cancelButton="true" layoutX="29.0" layoutY="536.0" mnemonicParsing="false" onAction="#fonction_voir" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: #4782A6;" text="voir" visible="false" />
+      <ImageView fx:id="imgview" fitHeight="283.0" fitWidth="265.0" layoutX="295.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="323.0" layoutY="85.0" prefHeight="46.0" prefWidth="201.0" styleClass="product__add-input-label" stylesheets="@offreStyle.css" text="L'affiche de l'évènement:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="-4.0" layoutY="-3.0" prefHeight="702.0" prefWidth="268.0" style="-fx-background-color: #57A1AC;">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="151.0" layoutX="93.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btndon" layoutX="33.0" layoutY="205.0" mnemonicParsing="false" onAction="#btndonaction" prefHeight="59.0" prefWidth="210.0" styleClass="btn" stylesheets="@offreStyle.css" text="Faire un don" />
+            <Button layoutX="35.0" layoutY="289.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="210.0" styleClass="btn" stylesheets="@offreStyle.css" text="Événements " />
+            <Button fx:id="btnboutique" layoutX="35.0" layoutY="372.0" mnemonicParsing="false" onAction="#btnboutiqueaction" prefHeight="59.0" prefWidth="210.0" styleClass="btn" stylesheets="@offreStyle.css" text="Boutique" />
+            <Button fx:id="btnmed" layoutX="33.0" layoutY="457.0" mnemonicParsing="false" onAction="#btnmedaction" prefHeight="59.0" prefWidth="210.0" styleClass="btn" stylesheets="@offreStyle.css" text="Posts Médecin" />
+         </children>
+      </Pane>
+      <Button fx:id="dec" layoutX="943.0" layoutY="14.0" mnemonicParsing="false" onAction="#dec1" prefHeight="46.0" prefWidth="142.0" style="-fx-background-color: #fa4747;" text="Deconnexion" />
+   </children>
+</AnchorPane>

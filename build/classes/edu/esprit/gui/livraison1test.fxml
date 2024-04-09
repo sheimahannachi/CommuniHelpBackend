@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.Livraison1testController">
+   <children>
+      <AnchorPane layoutX="312.0" layoutY="26.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="668.0" prefWidth="782.0">
+         <children>
+            <ScrollPane fx:id="menu_scrollPaneshop" layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="772.0">
+               <content>
+                  <GridPane fx:id="menu_gridPaneshop" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1746.0" prefWidth="670.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.199951171875" minWidth="10.0" prefWidth="328.199951171875" />
+                     </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="708.0" prefWidth="278.0" style="-fx-background-color: #57A1AC;">
+         <children>
+            <ImageView fitHeight="111.0" fitWidth="130.0" layoutX="72.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="donbtn" layoutX="29.0" layoutY="247.0" mnemonicParsing="false" onAction="#donaction" prefHeight="58.0" prefWidth="222.0" styleClass="btn" stylesheets="@offreStyle.css" text="Faire un don" />
+            <Button fx:id="eventbtn" layoutX="31.0" layoutY="338.0" mnemonicParsing="false" onAction="#eventaction" prefHeight="58.0" prefWidth="222.0" styleClass="btn" stylesheets="@offreStyle.css" text="Événements " />
+            <Button layoutX="25.0" layoutY="440.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="221.0" styleClass="btn" stylesheets="@offreStyle.css" text="Boutique" />
+            <Button fx:id="pubbtn" layoutX="26.0" layoutY="532.0" mnemonicParsing="false" onAction="#publicationaction" prefHeight="58.0" prefWidth="227.0" styleClass="btn" stylesheets="@offreStyle.css" text="Publications Mental-Health" />
+            <Button fx:id="dec" layoutX="71.0" layoutY="630.0" mnemonicParsing="false" onAction="#dec1" prefHeight="46.0" prefWidth="142.0" style="-fx-background-color: #fa4747;" text="Deconnexion" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

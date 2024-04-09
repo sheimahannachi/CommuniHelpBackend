@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="526.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.CardshopController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="87.0" prefHeight="378.0" prefWidth="561.0" style="-fx-border-color: black;">
+         <children>
+            <Button fx:id="acheterButton" layoutX="233.0" layoutY="289.0" mnemonicParsing="false" onAction="#acheterButtonClick" prefHeight="74.0" prefWidth="178.0" styleClass="textfield-design" stylesheets="@design.css" text="Acheter!" textFill="#132276">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Button>
+            <ImageView fx:id="postImageViewshop" fitHeight="205.0" fitWidth="341.0" layoutX="310.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="postContentTextshop" layoutX="24.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="341.0000000000001">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

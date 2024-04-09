@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="891.0" prefWidth="1319.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.InscritController">
+   <children>
+      <Label layoutX="336.0" layoutY="94.0" prefHeight="21.0" prefWidth="72.0" stylesheets="@design.css" text="Nom">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="336.0" layoutY="203.0" stylesheets="@design.css" text="Contact">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="339.0" layoutY="333.0" stylesheets="@design.css" text="Email">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="nomp" layoutX="463.0" layoutY="91.0" prefHeight="27.0" prefWidth="167.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <TextField fx:id="nump" layoutX="466.0" layoutY="200.0" prefHeight="27.0" prefWidth="167.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <TextField fx:id="mailp" layoutX="462.0" layoutY="328.0" prefHeight="27.0" prefWidth="176.0" styleClass="textfield-design" stylesheets="@design.css" />
+      <Button fx:id="ajoutp" layoutX="361.0" layoutY="658.0" mnemonicParsing="false" onAction="#ajouterparti" prefHeight="42.0" prefWidth="126.0" style="-fx-background-color: white;" styleClass="textfield-design" stylesheets="@design.css" text="Confirmer" textFill="#1e0f0f">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Button>
+      <Label fx:id="labelid" layoutX="473.0" layoutY="447.0" prefHeight="21.0" prefWidth="167.0" visible="false" />
+      <Pane layoutX="-1.0" layoutY="-41.0" prefHeight="933.0" prefWidth="270.0" style="-fx-background-color: #57A1AC;">
+         <children>
+            <ImageView fitHeight="260.0" fitWidth="200.0" layoutX="35.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="RT" layoutX="35.0" layoutY="733.0" mnemonicParsing="false" onAction="#retourtopra" prefHeight="43.0" prefWidth="176.0" styleClass="btn" stylesheets="@offreStyle.css" text="Retour" />
+         </children>
+      </Pane>
+      <VBox fx:id="badge" layoutX="784.0" layoutY="68.0" prefHeight="599.0" prefWidth="382.0">
+         <children>
+            <Label text="Bienvenue" translateX="148.0" translateY="1.0">
+               <font>
+                  <Font name="System Bold Italic" size="29.0" />
+               </font></Label>
+            <Label text="votre badge:" translateX="164.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label prefHeight="18.0" prefWidth="142.0" />
+            <ImageView fx:id="imageView" fitHeight="219.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true" translateX="35.0" translateY="24.0" x="19.0" />
+         </children>
+      </VBox>
+      <Button fx:id="telechargerBadge" layoutX="594.0" layoutY="650.0" mnemonicParsing="false" onAction="#telechargerBadge" prefHeight="50.0" prefWidth="126.0" styleClass="textfield-design" stylesheets="@design.css" text="Télécharger">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

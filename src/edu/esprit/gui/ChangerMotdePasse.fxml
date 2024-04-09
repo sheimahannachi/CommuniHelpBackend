@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="fxFront" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.ChangerMotdePasseController">
+   <children>
+      <TextField fx:id="fxcode" layoutX="85.0" layoutY="112.0" prefHeight="26.0" prefWidth="396.0" promptText="Code....." styleClass="textfield-design" stylesheets="@design.css">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </TextField>
+      <FontAwesomeIconView fx:id="fxsend" fill="#181ca1" glyphName="SEND" layoutX="266.0" layoutY="342.0" onMouseClicked="#SendVerificationCode" size="35" />
+      <Label contentDisplay="CENTER" layoutX="85.0" layoutY="78.0" prefHeight="18.0" prefWidth="178.0" stylesheets="@design.css" text="Code Vérification :" textFill="#371289">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="85.0" layoutY="151.0" prefHeight="27.0" prefWidth="254.0" text="Nouveau Mot de Passe  : " textFill="#22116b">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="227.0" text="Confirmez le nouveau Mot de Passe : " textFill="#1c108e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="fxnouveau" layoutX="85.0" layoutY="186.0" prefHeight="26.0" prefWidth="396.0" promptText="Nouveau Mot de Passe ..." styleClass="textfield-design" stylesheets="@design.css" />
+      <PasswordField fx:id="fxconfirmernouveau" layoutX="85.0" layoutY="262.0" prefHeight="26.0" prefWidth="396.0" promptText="Confirmez le nouveau mot de passe ..." styleClass="textfield-design" stylesheets="@design.css" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="142.0" layoutY="28.0" prefHeight="27.0" prefWidth="318.0" text="Modifier Votre mot de passe " textFill="#b78c18">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

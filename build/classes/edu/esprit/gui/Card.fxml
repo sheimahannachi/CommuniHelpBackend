@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.CardoumaController">
+   <children>
+      <AnchorPane layoutX="56.0" layoutY="34.0" prefHeight="455.0" prefWidth="792.0" style="-fx-border-color: black;">
+         <children>
+            <Button fx:id="donateButton" layoutX="126.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleDonateButtonClick" prefHeight="52.0" prefWidth="342.0" styleClass="btn" stylesheets="@offreStyle.css" text="Donate now ! " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect></Button>
+            <ImageView fx:id="postImageView" fitHeight="205.0" fitWidth="352.0" layoutX="415.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="postContentText" layoutX="24.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.60003662109386">
+               <font>
+                  <Font name="Eras Bold ITC" size="17.0" />
+               </font></Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

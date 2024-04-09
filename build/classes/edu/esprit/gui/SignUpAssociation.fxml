@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="fxFront" minHeight="-Infinity" prefHeight="700.0" prefWidth="1100.0" styleClass="hypertext-design" stylesheets="@design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.SignUpAssociationController">
+   <children>
+      <ImageView fitHeight="225.0" fitWidth="220.0" layoutX="20.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Img/Logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="393.0" prefHeight="18.0" prefWidth="166.0" textAlignment="CENTER" textFill="#1e1466">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="554.0" layoutY="131.0" prefHeight="40.0" prefWidth="227.0" stylesheets="@design.css" text="Inscrivez Vous ! " textAlignment="CENTER" textFill="#76cdcd" translateX="154.0" translateY="-17.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fxnom" layoutX="553.0" layoutY="243.0" prefHeight="26.0" prefWidth="250.0" promptText="Nom d'association..." styleClass="textfield-design" stylesheets="@design.css" translateX="143.0" translateY="-58.0">
+         <font>
+            <Font name="Book Antiqua" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="fxemail" layoutX="553.0" layoutY="312.0" prefHeight="26.0" prefWidth="250.0" promptText="Email..." styleClass="textfield-design" translateX="144.0" translateY="-64.0">
+         <font>
+            <Font name="Book Antiqua" size="15.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="fxpassword" layoutX="553.0" layoutY="374.0" prefHeight="26.0" prefWidth="250.0" promptText="Mot de Passe...." styleClass="textfield-design" translateX="143.0" translateY="-66.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="fxnum" layoutX="554.0" layoutY="611.0" prefHeight="26.0" prefWidth="250.0" promptText="Numéro de Télephone...." styleClass="textfield-design" translateX="143.0" translateY="-171.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="fxadresse" layoutX="554.0" layoutY="690.0" prefHeight="26.0" prefWidth="250.0" promptText="Adresse...." styleClass="textfield-design" translateX="143.0" translateY="-192.0">
+         <font>
+            <Font name="Book Antiqua" size="15.0" />
+         </font>
+      </TextField>
+      <Pane layoutX="264.0" layoutY="1.0" />
+      <Button fx:id="btninscrit" alignment="CENTER" contentDisplay="CENTER" layoutX="551.0" layoutY="769.0" mnemonicParsing="false" onAction="#inscrit" prefHeight="38.0" prefWidth="243.0" styleClass="btn" stylesheets="@offreStyle.css" text="S'inscrire " translateX="154.0" translateY="-213.0">
+         <font>
+            <Font name="Book Antiqua" size="15.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="confirmerPassword" layoutX="553.0" layoutY="458.0" prefHeight="32.0" prefWidth="250.0" promptText="Confirmer Mot de Passe..." styleClass="textfield-design" stylesheets="@design.css" translateX="143.0" translateY="-81.0">
+         <font>
+            <Font name="Book Antiqua" size="15.0" />
+         </font>
+      </PasswordField>
+      <VBox layoutX="395.0" layoutY="9.0" prefHeight="700.0" prefWidth="553.0" style="-fx-background-color: #57A1AC;" translateX="-398.0" translateY="-9.0">
+         <children>
+            <ImageView fitHeight="158.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true" translateX="180.0" translateY="131.0">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="374.0" styleClass="sideBtnTextTitleAPP" text="________________" textAlignment="CENTER" textFill="WHITE" translateX="13.0" translateY="126.0">
+               <opaqueInsets>
+                  <Insets bottom="44.0" left="33.0" right="44.0" top="10.0" />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="314.0" text="Vous avez deja un Compte ? Connecter-Vous ! " textAlignment="CENTER" textFill="WHITE" translateX="109.0" translateY="197.0" />
+            <Button fx:id="btncnx" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#connexion" prefHeight="29.0" prefWidth="179.0" styleClass="nav-btnn" stylesheets="@offreStyle.css" text="Se Connecter !" textFill="#401212" translateX="168.0" translateY="216.0">
+               <font>
+                  <Font name="Book Antiqua" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

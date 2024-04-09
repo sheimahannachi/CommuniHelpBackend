@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" stylesheets="@postsMed.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.PostsMedController">
+   <children>
+      <Button fx:id="bimporter" layoutX="880.0" layoutY="562.0" mnemonicParsing="false" onAction="#parcourirImage" prefHeight="38.0" prefWidth="160.0" styleClass="textfield-design" stylesheets="@design.css" text="Importer une image" textFill="#232121">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      
+      <Button fx:id="bPublier" layoutX="971.0" layoutY="127.0" mnemonicParsing="false" onAction="#ajoutPub" prefHeight="27.0" prefWidth="96.0" styleClass="textfield-design" text="Publier" textFill="#232122">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <stylesheets>
+            <URL value="@postsMed.css" />
+            <URL value="@design.css" />
+         </stylesheets></Button>
+      <Button fx:id="bModifierPub" layoutX="971.0" layoutY="182.0" mnemonicParsing="false" onAction="#ModifierPub" prefHeight="27.0" prefWidth="96.0" styleClass="textfield-design" text="Modifier " textFill="#131313">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <stylesheets>
+            <URL value="@postsMed.css" />
+            <URL value="@design.css" />
+         </stylesheets></Button>
+      <Button fx:id="bSupprimerPub" layoutX="971.0" layoutY="242.0" mnemonicParsing="false" onAction="#SupprimerPub" prefHeight="27.0" prefWidth="96.0" styleClass="textfield-design" text="Supprimer " textFill="#131313">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <stylesheets>
+            <URL value="@postsMed.css" />
+            <URL value="@design.css" />
+         </stylesheets></Button>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="860.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane layoutX="326.0" layoutY="106.0" prefHeight="206.0" prefWidth="289.0" style="-fx-background-color: #f8bebd;" styleClass="mainFxmlClass" stylesheets="@postsMed.css">
+         <children>
+            <ComboBox fx:id="cbSpecialite" layoutX="141.0" layoutY="129.0" prefHeight="25.0" prefWidth="117.0">
+       
+          
+          
+          
+      </ComboBox>
+            <TextField fx:id="tfTexte" layoutX="141.0" layoutY="39.0" prefHeight="20.0" prefWidth="117.0" />
+            <Label layoutX="10.0" layoutY="131.0" text="Specialité associée:" textFill="#2e2a2a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="60.0" layoutY="38.0" prefHeight="26.0" prefWidth="50.0" text="Texte:" textFill="#191b1a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <Pane layoutX="658.0" layoutY="106.0" prefHeight="206.0" prefWidth="282.0" style="-fx-background-color: #f8bebd;" styleClass="mainFxmlClass" stylesheets="@postsMed.css">
+         <children>
+            <Label layoutX="7.0" layoutY="52.0" text="Date de publication : " textFill="#181818">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <DatePicker fx:id="dPub" layoutX="141.0" layoutY="49.0" prefHeight="26.0" prefWidth="124.0" />
+            <TextField fx:id="tfTags" layoutX="141.0" layoutY="132.0" prefHeight="25.0" prefWidth="124.0" />
+            <Label layoutX="63.0" layoutY="134.0" text="Tags :" textFill="#1e1b1b">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    <AnchorPane layoutX="528.0" layoutY="392.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="0.0" />
+      <SplitPane layoutX="833.0" layoutY="385.0" prefHeight="222.0" prefWidth="9.0" />
+      <TextField fx:id="imagePathTextField" layoutX="497.0" layoutY="471.0" />
+      <AnchorPane prefHeight="700.0" prefWidth="282.0" style="-fx-background-color: #57A1AC;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="150.0" layoutX="76.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <TableView fx:id="tablePub" editable="true" layoutX="322.0" layoutY="385.0" prefHeight="222.0" prefWidth="500.0" style="-fx-background-color: #f8bebd;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <Label fx:id="fxName" layoutX="471.0" layoutY="49.0" text="Label" visible="false" />
+      <Label fx:id="fxemail" layoutX="588.0" layoutY="41.0" prefHeight="18.0" prefWidth="38.0" text="n" visible="false" />
+      <Button fx:id="dec" layoutX="940.0" layoutY="26.0" mnemonicParsing="false" onAction="#dec1" prefHeight="46.0" prefWidth="142.0" style="-fx-background-color: #fa4747;" text="Deconnexion" />
+   </children>
+   <styleClass>
+      <String fx:value="mainFxmlClass" />
+      <String fx:value="mainFxmlClass" />
+   </styleClass>
+</AnchorPane>
